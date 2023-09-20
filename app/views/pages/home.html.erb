@@ -1,7 +1,35 @@
-<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1462206092226-f46025ffe607?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2299&q=80); background-size: cover; height: 100vh;">
-  <div class="container text-white text-center">
-  <h1>Welcome to my website</h1>
+<% if user_signed_in? %>
+  <div class="jumbotron jumbotron-home">
+    <div class="container">
+      <h1>Welcome back!<h1>
+    </div>
   </div>
-  <p>sign up</p>
+<% else %>
+  <div class="jumbotron jumbotron-home">
+        <div class="container">
+      <h1>Welcome to my website!</h1>
+      <P>This is a ...</p>
+      <%= link_to "learn more >>", "#", class: "btn btn-primary btn-lg" %>
+        </div>
   </div>
-</div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, eos corporis magni nulla inventore expedita molestiae necessitatibus iusto quos libero. Possimus harum asperiores doloribus corporis! Architecto quasi repellat fuga exercitationem.</p>
+        <p><%= link_to "View details", "#", class: "btn btn-secondaty" %></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, eos corporis magni nulla inventore expedita molestiae necessitatibus iusto quos libero. Possimus harum asperiores doloribus corporis! Architecto quasi repellat fuga exercitationem.</p>
+        <p><%= link_to "View details", "#", class: "btn btn-secondaty" %></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, eos corporis magni nulla inventore expedita molestiae necessitatibus iusto quos libero. Possimus harum asperiores doloribus corporis! Architecto quasi repellat fuga exercitationem.</p>
+        <p><%= link_to "View details", "#", class: "btn btn-secondaty" %></p>
+      </div>
+    </div>
+  </div>
+<% end %>
